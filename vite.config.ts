@@ -14,7 +14,7 @@ console.log("env.VITE_API_ENDPOINT", env.VITE_API_ENDPOINT)
   return {
           server: {
             proxy: {
-              "/api": env.VITE_API_ENDPOINT,
+              "/api": "https://api-newbalancefi.up.railway.app",
             },
           },
           plugins: [react()],
