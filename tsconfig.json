@@ -17,7 +17,10 @@
     "jsx": "react-jsx",
     "paths": {
       "~/*": ["./src/*"]
-    }
+    },
+    "types": ["vite/client"],
+    "typeRoots": ["node_modules/@types", "src/types", "src/vite-env.d.ts", "env.d.ts"],
+
   },
   "include": ["src", "./jest-setup.ts", "*.d.ts", "types", "vite.config.ts", "../mockDataTs.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -27,7 +27,6 @@ import Wallets from "./Wallets";
 import Stats from "./Stats";
 import Spinner from "./Spinner";
 import InputBase from "@mui/material/InputBase";
-import mockData from "../../../mockDataTs";
 import { useEffect, useState } from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useWalletDisplay } from "../hooks/useWalletDisplay";
