@@ -22,6 +22,6 @@
     "typeRoots": ["node_modules/@types", "src/types", "src/vite-env.d.ts", "env.d.ts"],
 
   },
-  "include": ["src", "./jest-setup.ts", "*.d.ts", "types", "vite.config.ts", "../mockDataTs.ts","./src/apiEndpoint.ts","./src/vite-env.d.ts"],
+  "include": ["src", "./jest-setup.ts", "*.d.ts", "types", "vite.config.ts", "../mockDataTs.ts","./src/vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

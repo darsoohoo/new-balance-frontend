@@ -5,5 +5,5 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   }, 
-  "include": ["*.d.ts", "types", "vite.config.ts","./src/apiEndpoint.ts","./src/vite-env.d.ts"],
+  "include": ["vite.config.ts"],
 }
