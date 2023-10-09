@@ -18,3 +18,10 @@ interface ImportMeta {
   readonly VITE_COINBASE_CLIENT_ID: string;
   readonly VITE_COINBASE_REDIRECT_URL: string;
 }
+
+const apiEndpoint: any = {
+  value: import.meta.env.VITE_API_ENDPOINT,
+  
+
+}
+export default apiEndpoint;
