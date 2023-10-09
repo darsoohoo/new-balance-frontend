@@ -1,32 +1,19 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from 'vite'
 import react from "@vitejs/plugin-react";
-import apiEndpoint from "./src/apiEndpoint";
+
   
 // https://vitejs.dev/config/
-
-export default defineConfig(({ command, mode, ssrBuild }) => {
-  if (command === 'serve') {
-    return {
-      // dev specific config
-    server: {
-      proxy: {
-        "/api": "http://localhost:8000",
-      },
-    },
-    plugins: [react()]
-
-
+export default defineConfig( ({ command, mode }) => {
+  // Load env file based on `mode` in the current working directory.
+  // Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
+  const env = loadEnv(mode, process.cwd(), '')
+  console.log("env issssssssssssssssss ", env)
+  return {
+          server: {
+            proxy: {
+              "/api": env.VITE_API_ENDPOINT,
+            },
+          },
+          plugins: [react()]
     }
-  } else {
-    // command === 'build'
-    return     {
-      server: {
-        proxy: {
-          "/api": "https://api-newbalancefi.up.railway.app",
-        },
-      },
-      plugins: [react()]
-    }
-  }
-})
-  
+});
