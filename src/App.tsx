@@ -35,8 +35,6 @@ const App: React.FC = () => {
           <Routes>
               <Route path="/" element={<Landing handleThemeModeSwitch={handleThemeModeSwitch} darkMode={darkMode} handleThemeColorChange={handleThemeColorChange} themeColor={themeColor}  />} />
               <Route path="/oauth/callback" element={<Landing handleThemeModeSwitch={handleThemeModeSwitch} darkMode={darkMode} handleThemeColorChange={handleThemeColorChange} themeColor={themeColor} />} />
-              {/* <Route path="/api/oauth/coinbase/user" element={<Landing handleThemeModeSwitch={handleThemeModeSwitch} darkMode={darkMode} handleThemeColorChange={handleThemeColorChange} themeColor={themeColor}   />} />
-            <Route path="/oauth/callback" element={<Spinner />} /> */}
           </Routes>
         </Router>
       </ThemeProvider>
