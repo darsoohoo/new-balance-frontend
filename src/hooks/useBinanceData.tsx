@@ -38,7 +38,7 @@ const useBinanceData = (filterDate: string, binanceApiKey: string | undefined, b
         ).toString();
 
         try {
-            const transactionResponse = await fetch("api/cefi/transactions/bin" + "?" + queryString, {
+            const transactionResponse = await fetch(import.meta.env.VITE_API_ENDPOINT +"/api/cefi/transactions/bin" + "?" + queryString, {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
@@ -80,7 +80,7 @@ const useBinanceData = (filterDate: string, binanceApiKey: string | undefined, b
         ).toString();
 
         try {
-            const balancesResponse = await fetch("api/cefi/accounts/bin" + "?" + queryString, {
+            const balancesResponse = await fetch(import.meta.env.VITE_API_ENDPOINT +"/api/cefi/accounts/bin" + "?" + queryString, {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
